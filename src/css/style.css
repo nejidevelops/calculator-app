@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    /* |---- THEME 1 ----| */
+
+    /* |---- Variables Backgrounds ----| */
+     --very-dark-desaturated-blue: hsl(222, 26%, 31%); /*(main background) */
+     --very-dark-desaturated-blue-key: hsl(223, 31%, 20%); /*(toggle background, keypad background) */
+     --very-dark-desaturated-blue-screen: hsl(224, 36%, 15%); /*(screen background) */
+
+
+/* |---- Variable keys ----| */
+    --desaturated-blue: hsl(225, 21%, 49%);/*(key background)*/
+    --desaturated-dark-blue : hsl(224, 28%, 35%);/* (key shadow) */
+
+    --Red : hsl(6, 63%, 50%); /*(key background, toggle) */
+    --Dark-red : hsl(6, 70%, 34%); /*(key shadow) */
+
+    --Light-grayish-orange: hsl(30, 25%, 89%); /*(key background)*/ 
+    --Grayish-orange: hsl(28, 16%, 65%);  /*(key shadow) */
+
+/* Text */
+
+ --very-dark-grayish-blue: hsl(221, 14%, 31%);
+ --White: hsl(0, 0, 100%);
+
+/* Theme 2 */
+
+/* Theme 2 Backgrounds */
+     --Light-gray: hsl(0, 0%, 90%);/*(main background) */
+     --Grayish-red: hsl(0, 5%, 81%);/*(toggle background, keypad background) */
+     --Very-light-gray : hsl(0, 0%, 93%); /*(screen background) */
+
+/* #### Theme 2 Keys */
+
+    --Dark-moderate-cyan : hsl(185, 42%, 37%);/*(key background) */
+    --Very-dark-cyan : hsl(185, 58%, 25%);/* (key shadow) */
+
+    --Orange : hsl(25, 98%, 40%);/* (key background, toggle) */
+    --Dark-orange : hsl(25, 99%, 27%);/*(key shadow) */
+
+    --Light-grayish-yellow : hsl(45, 7%, 89%);/* (key background) */
+    --Dark-grayish-orange : hsl(35, 11%, 61%);/*(key shadow) */
+
+/* #### Theme 2 Text */
+
+    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    --White : hsl(0, 0, 100%);/*(text) */
+
+/* ### Theme 3 */
+
+/* #### Backgrounds */
+
+    --Very-dark-violet: hsl(268, 75%, 9%); /* (main background) */
+    --Very-dark-violet: hsl(268, 71%, 12%);/* (toggle background, keypad background, screen    background) */
+
+/* #### Keys */
+
+    --Dark-violet : hsl(281, 89%, 26%);/* (key background) */
+    --Vivid-magenta : hsl(285, 91%, 52%); /* (key shadow)*/
+
+    --Pure-cyan : hsl(176, 100%, 44%);/* (key background, toggle) */
+    --Soft-cyan: hsl(177, 92%, 70%); /* (key shadow) */
+
+    --Very-dark-violet : hsl(268, 47%, 21%);/* (key background) */
+    --Dark-magenta : hsl(290, 70%, 36%);/* (key shadow) */
+
+/* #### Theme 3 Text */
+
+    --Light-yellow: hsl(52, 100%, 62%);
+    --Very-dark-blue: hsl(198, 20%, 13%);
+    --White : hsl(0, 0, 100%); /*(text)*/
+
+    /* Font */
+    --general: 'Spartan', sans-serif; /* (700) */
+}
+
+button,
+input[type='submit'],
+input[type='reset']{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+body{
+    background-color: var(--very-dark-desaturated-blue);
+    transition: .3s ease all;
+}
+
+body.theme-two{
+    background-color: var(--Light-gray);
+}
+
+body.theme-three{
+    background-color: var(--Very-dark-violet);
+}
+
+.calc-container{
+    display: flex;
+    flex-direction: column;
+    height: 788px;
+    padding: 23px;
+}
+
+.header-calc{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 60px;
+    font-family: var(--general);
+    margin-bottom: 24px;
+}
+
+.header-calc h2{
+    font-size: 3rem;
+    color: #fff;
+}
+
+body.theme-two h2{
+    color: var(--Very-dark-grayish-yellow);
+}
+
+body.theme-three h2{
+    color: var(--Light-yellow);
+}
+
+.theme-slect_container{
+    display: flex;
+    justify-content: space-between;
+    width: 187px;
+    height: 60px;
+    font-family: var(--general);
+    color: #fff;
+}
+
+body.theme-two .theme-slect_container{
+    color: var(--Very-dark-grayish-yellow);
+}
+
+body.theme-three .theme-slct_container{
+    color: var(--Light-yellow);
+}
+
+.theme-slect_container .subtitle{
+    align-self: flex-end;
+    font-size: 1.7rem;
+    margin-right: 24px;
+}
+
+.theme-changer_container{
+    align-self: center;
+    width: 100px;
+    height: 65px;
+}
+
+.radio_container{
+    width: 100%;
+    height: 100%;
+}
+
+.number-themes {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 10px;
+    height: 18px;
+}
+
+.number-themes h3{
+    font-size: 1.5rem;
+}
+
+.number-themes label{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.themes-switch{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+input[type= 'radio']{
+    display: none;
+}
+
+.lbl-theme{
+    position: relative;
+    width: 100px;
+    height: 30px;
+    background-color: var(--very-dark-desaturated-blue-key);
+    border-radius: 100px 0px 0px 100px;
+    cursor: pointer;
+}
+
+body.theme-two .lbl-theme {
+    background-color: var(--grayish-red);
+}
+  
+body.theme-three .lbl-theme {
+    background-color: var(--Very-dark-violet2); 
+}
+
+.lbl-theme:nth-child(2){
+    right: 1px;
+}
+
+.lbl-theme:nth-child(4){
+    border-radius: 0px;
+    right: 2px;
+}
+
+.lbl-theme:nth-child(6){
+    width: 120px;
+    border-radius: 0px 100px 100px 0;
+    right: 3px;
+}
+
+.switch-ball{
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 5;
+    width: 22px;
+    height: 22px;
+    background-color: var(--Red);
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+body.theme-two .switch-ball{
+    background-color: var(--Orange);
+}
+
+body.theme-three .switch-ball{
+    background-color: var(--Pure-cyan);
+}
+
+/* Calculaor Screen */
+
+.screen-calc{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 88px;
+    background-color: var(--very-dark-desaturated-blue-screen);
+    border-radius: 12px;
+    padding: 28px;
+    font-family: var(--general);
+    font-size: 2.4rem;
+    font-weight: 700;
+    overflow: hidden;
+    color: #fff;
+}
+
+body.theme-two .screen-calc{
+    background-color: var(--Very-light-gray);
+}
+
+body.theme-three .screen-calc{
+    background-color: var(--Very-dark-violet2);
+}
+
+/* Keyboard Calc */
+.keyboard-calc{
+    display: grid;
+    grid-template-columns: repeat(4,60px);
+    grid-template-rows: repeat(5,60px);
+    gap: 13px;
+    width: 100%;
+    height: 421px;
+    background-color: var(--very-dark-desaturated-blue-key);
+    margin-top: 23px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+body.theme-two .keyboard-calc{
+    background-color: var(--grayish-red);
+}
+
+body.theme-three .keyboard-calc{
+    background-color: var(--Very-dark-violet2);
+}
+
+.btn-calc{
+    background-color: var(--Light-grayish-orange);
+    font-family: var(--general);
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--very-dark-grayish-blue);
+    border-radius: 7px;
+    box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+body.theme-three .btn-calc{
+    background-color: var(--Very-dark-violet);
+    color: var(--Light-yellow);
+    box-shadow: 0px 4px 0px var(--Dark-magenta);
+}
+
+.operator{
+    background-color: var(--desaturated-blue);
+    box-shadow: var(--desaturated-dark-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 7px;
+}
+
+body.theme-three .operator{
+    background-color: var(--Very-dark-violet);
+    color: var(--Light-yellow);
+    box-shadow: 0px 4px 0px var(--Dark-magenta);
+}
+
+body.theme-two .operator:nth-child(4){
+    background-color: var(--Dark-moderate-cyan);
+    box-shadow: 0px 4px 0px var(--Very-dark-cyan);
+}
+
+body.theme-three .operator:nth-child(4){
+    background-color: var(--Dark-violet);
+    box-shadow: 0px 4px 0px var(--Vivid-magenta);
+}
+
+.operator:nth-child(8){
+    background-color: var(--Light-grayish-orange);
+    font-family: var(--general);
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--very-dark-grayish-blue);
+    border-radius: 7px;
+    box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(12){
+    background-color: var(--Light-grayish-orange);
+    font-family: var(--general);
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--very-dark-grayish-blue);
+    border-radius: 7px;
+    box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(15){
+    background-color: var(--Light-grayish-orange);
+    font-family: var(--general);
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--very-dark-grayish-blue);
+    border-radius: 7px;
+    box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(16){
+    background-color: var(--Light-grayish-orange);
+    font-family: var(--general);
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--very-dark-grayish-blue);
+    border-radius: 7px;
+    box-shadow: 0px 4px 0px var(--Grayish-orange);
+}
+
+.operator:nth-child(17){
+    grid-column: span 2;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--desaturated-blue);
+    box-shadow: 0px 4px 0px var(--desaturated-dark-blue);
+    border-radius: 7px;
+}
+
+body.theme-two .operator:nth-child(17){
+    background-color: var(--Dark-moderate-cyan);
+    box-shadow: 0px 4px 0px var(--Very-dark-cyan);
+}
+
+body.theme-three .operator:nth-child(17){
+    background-color: var(--Dark-violet);
+    box-shadow: 0px 4px 0px var(--Vivid-magenta);
+}
+
+.operator:nth-child(18){
+    grid-column: span 2;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--Red);
+    box-shadow: 0px 4px 0px var(--Dark-red);
+}
+
+body.theme-two .operator:nth-child(18){
+    background-color: var(--Orange);
+    box-shadow: 0px 4px 0px var(--Dark-orange);
+}
+
+body.theme-three .operator:nth-child(18){
+    background-color: var(--Pure-cyan);
+    color: rgb(0,0,0);
+    box-shadow: 0px 4px 0px var(--Soft-cyan);
+}
+
+.attribution{
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (min-width: 1366px) {
+    .calc-container {
+      width: 535px;
+      height: 697px;
+      margin: 0px auto;
+    }
+  
+    .header-calc {
+      width: 512px;
+    }
+  
+    .screen-calc {
+      width: 512px;
+      height: 123px;
+    }
+  
+    .keyboard-calc {
+      grid-template-columns: repeat(4,96px);
+      grid-template-rows: repeat(5,58px);
+      justify-content: center;
+      gap: 23.5px;
+      width: 512px;
+      height: 455px;
+      padding: 28px;
+    }
+  
+} 
